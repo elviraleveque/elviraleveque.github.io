@@ -47,9 +47,9 @@ process = function () {
     }
 }
 
-field.onkeyup = function () {
-    bill.innerHTML = '$' + field.value;
-}
+// field.onkeyup = function () {
+//     bill.innerHTML = '$' + field.value;
+// }
 
 Reset = function () {
     values = []
