@@ -1,0 +1,26 @@
+#container {
+    display: grid;
+    background-color: cornflowerblue;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+#container > div {
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+[class*="item"] {
+    grid-column: 1 / span 6;
+}
+
+@media only screen and (min-width: 768px) {
+.item1 {grid-area: 1 / 1 / 1 / 7;}
+.item2 {grid-area: 2 / 1 / 4 / 2;}
+.item3 {grid-area: 2 / 2 / 3 / 5;}
+.item4 {grid-area: 2 / 5 / 3 / 7;}
+.item5 {grid-area: 3 / 2 / 4 / 7;}
+}

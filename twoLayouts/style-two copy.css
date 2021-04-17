@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #222;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+button {
+    background-color: #D4216C;
+    color: #FFF;
+    padding: 0.7em 1em;
+    border: 2px solid #D4216C;
+    border-radius: 5em;
+    font-size: 13pt;
+    transition: all 0.15s ease-in-out;
+}
+
+button:hover {
+    background: none;
+    color: #D4216C;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10% 0;
+    box-shadow: 0 1px 20px 0px rgba(34, 34, 34, 0.15);
+    background-color: #FFF;
+}
+
+.logo {
+    width: 50%;
+    max-width: 200px;
+    padding-bottom: 0.5em;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.menu li {
+    padding: 0.5em 0;
+    cursor: pointer;
+}
+
+.menu li:hover{
+    background-color: #D4216C;
+    color: #fff
+}
+
+h1 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 3.5em;
+    padding: 0 10%;
+}
+
+h1 strong{
+    color: #D4216C;
+}
+
+.main-img {
+    display: none;
+}
+
+.donuts-panel {
+    padding: 0 10%;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.donut-product {
+    padding: 50px;
+    border: 2px solid #D4216C;
+    border-radius: 1em;
+    transition: all 0.15s ease-in-out;
+    margin-bottom: 20px;
+}
+.donut-product-img {
+    max-width: 80%;
+    text-align: center;
+}
+
+.donut-product-title {
+    color: #D4216C;
+    font-size: 20pt;
+    margin: 0 0 20px;
+}
+
+.checked {
+    color: #D4216C;
+}
+
+p.caption {
+    display: none;
+    font-size: 12pt;
+    line-height: 1.4;
+}
+
+.macros {
+    padding: 0;
+    list-style-type: none;
+}
+
+.macros li {
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    font-size: 12pt;
+    justify-content: space-between;
+}
+
+.macros li:last-child {
+    border-bottom: none;
+}
+
+.macro {
+    font-weight: 900;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    nav {padding: 5% 0;}
+    .logo {flex: 1;}
+    .menu {display: flex; flex: 1; justify-content: space-between;}
+    .menu li{flex: 1;}
+    .donuts-panel {display: flex; flex-wrap: wrap; justify-content: space-between;}
+    .donut-product {width: 48%;}
+    .donut-product:hover {box-shadow: 0 0 10px 2px #d4216c3b; transform: scale(1.05);}
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    nav {flex-direction: row; justify-content: space-between; padding: 30px 10%; position: sticky; top: 0;}
+    .logo {max-width: 120px;}
+    .menu {max-width: 60%; font-size: 13pt; }
+    .menu li { border-bottom: 1px solid #FFF;}
+    .menu li:hover {background: none; color:#D4216C; border-bottom: 1px solid #D4216C;}
+    .donut-product {width: 24%;}
+    h1{font-size: 60pt;}
+
+}
+
+/* @media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        position: static;
+    }
+    .menu {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .menu li {
+        padding: 5px;
+    }
+    .main-img {
+        order: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h1 {
+        margin: 40px 0;
+        font-size: 40pt;
+    }
+    .donuts-panel {
+        flex-direction: column;
+    }
+    .donut-product {
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+    .donut-product:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+    .macros {
+        text-align: center;
+    }
+
+    .donut-product:hover {
+    box-shadow: 0 0 10px 2px #d4216c3b;
+    transform: scale(1.1);
+}
+} */

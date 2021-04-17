@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <input type="number" id="value1">
+        <input type="number" id="value2">
+        <button onclick="calc(this);" id="+">+</button>
+        <button onclick="calc(this);" id="-">-</button>
+        <button onclick="calc(this);" id="*">*</button>
+        <button onclick="calc(this);" id="/">/</button>
+        <button onclick="calc(this);" id="%">%</button>
+        <p id="result"></p>
+        <script>
+            p = document.getElementById('result');
+            calc = function(operator) {
+                value1 = parseInt(document.getElementById('value1').value)
+                value2 = parseInt(document.getElementById('value2').value)
+                result = eval(`${value1} ${operator.id} ${value2}`)
+                // if (operator.id == '+') {
+                //     result = value1 + value2;
+                //     } else if (operator.id == '-') {
+                //     result = value1 - value2;
+                //     } else if (operator.id == '*') {
+                //     result = value1 * value2;
+                //     } else if (operator.id == '/') {
+                //     result = value1 / value2;
+                //     } else {
+                //     result = value1 % value2;
+                //     }
+                p.innerText = result
+            }
+        </script>
+    </body>
+</html>
+
