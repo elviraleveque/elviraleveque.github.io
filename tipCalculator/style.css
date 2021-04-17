@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15pt;
+}
+
 body {
     margin: 0;
     background-color: #eef0ff;
@@ -9,31 +17,44 @@ body {
 }
 
 .container {
+    min-width: 290px;
+    min-height: 500px;
+    padding: 2.6rem;
+    border-radius: 1rem;
     background-color: #cbd1ff;
-    padding: 40px;
-    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #444a771e;
     color: #444a77;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
-    box-shadow: 0 0 10px 2px #444a771e;
+    justify-content: center;
+
 }
 
 h2{
+    font-size: 1.5rem;
     width: 100%;
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 0 0 1.5rem;
 }
 
 input {
     display: block;
     color: #444a77;
-    border-radius: 5em;
+    border-radius: 5rem;
     border: 1px solid #444a77;
     padding: 0.5em 0.5em;
     margin-bottom: 0.5rem;
-    width: 50%;
+    width: 70%;
+    font-size: 0.7rem;
+}
+
+#error-msg {
+    width: 70%;
+    color: red;
+    margin: 0 0 0.8rem 1rem;
+    font-size: 0.6rem;
+    text-align: left;
 }
 
 .buttons {
@@ -41,11 +62,13 @@ input {
 }
 
 button{
-    border-radius: 10px;
+    border-radius: 5rem;
+    padding: 0.3rem 0.5rem;
     border: none;
     background-color: #eef0ff;
     color: #444a77;
     transition: all 0.15s ease-in-out;
+    font-size: 0.7rem;
 }
 
 button:hover{
@@ -64,26 +87,18 @@ table {
 
 th {
     width: 33.33%;
-    font-size: 8pt;
+    font-size: 0.65rem;
     opacity: 0.5;
 }
 
-th#total {
-    font-size: 12pt;
+th#tip {
+    font-size: 0.8rem;
 }
 
-td#totalPP {
-    font-size: 15pt;
+td#tipPP {
+    font-size: 1.2rem;
 }
 
 .invalid {
     border: 1px solid red;
-}
-
-#error-msg {
-    width: 50%;
-    color: red;
-    margin: 0 0 10px;
-    font-size: 0.8em;
-    text-align: left;
 }

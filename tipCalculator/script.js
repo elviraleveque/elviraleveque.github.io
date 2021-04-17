@@ -8,7 +8,7 @@ bill = document.getElementById('bill');
 tip = document.getElementById('tip');
 guests = document.getElementById('guests');
 
-totalPP = document.getElementById('totalPP');
+tipPP = document.getElementById('tipPP');
 
 
 
@@ -28,7 +28,7 @@ process = function () {
             // Reset values if restart using 'next' button
             tip.innerHTML = '0%';
             guests.innerHTML = 0;
-            totalPP.innerText = '$0.00';
+            tipPP.innerText = '$0.00';
         } else if (values.length === 2) {
             field.placeholder = 'Enter numeber of guests';
             tip.innerHTML = values[1] + '%';
@@ -36,7 +36,7 @@ process = function () {
         } else if (values.length === 3) {
             guests.innerHTML = values[2];
             // values[0] -> bill, values[1] -> percentage, values[2] -> people
-            totalPP.innerText = '$' + (values[0] + values[0] * values[1] / 100) / values[2]
+            tipPP.innerText = '$' + (values[0] * values[1] / 100) / values[2]
             values = []
             field.placeholder = 'Insert bill amount';
             nextButton.innerHTML = 'Next'
@@ -55,13 +55,13 @@ Reset = function () {
     values = []
     field.value = null;
     field.placeholder = 'Insert bill amount';
+    field.classList.remove('invalid')
+    errorMsg.innerHTML = '&nbsp;'
     nextButton.innerHTML = 'Next'
     bill.innerHTML = '$0.00';
     tip.innerHTML = '0%';
     guests.innerHTML = 0;
-    totalPP.innerText = '$0.00';
-    field.classList.remove('invalid')
-    errorMsg.innerHTML = '&nbsp;'
+    tipPP.innerText = '$0.00';
 }
 
 // DA FARE:
