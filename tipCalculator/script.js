@@ -1,18 +1,20 @@
-field = document.getElementById('field');
-values = [];
-errorMsg = document.getElementById('error-msg')
+"use strict";
 
-nextButton = document.getElementById('next');
+let field = document.getElementById('field');
+let values = [];
+let errorMsg = document.getElementById('error-msg')
 
-bill = document.getElementById('bill');
-tip = document.getElementById('tip');
-guests = document.getElementById('guests');
+let nextButton = document.getElementById('next');
 
-tipPP = document.getElementById('tipPP');
+let bill = document.getElementById('bill');
+let tip = document.getElementById('tip');
+let guests = document.getElementById('guests');
+
+let tipPP = document.getElementById('tipPP');
 
 
 
-process = function () {
+let process = function () {
     field.focus()
     // An input type number returns an empty string if you type text. 
     // Empty strings are falsy values.
@@ -36,7 +38,8 @@ process = function () {
         } else if (values.length === 3) {
             guests.innerHTML = values[2];
             // values[0] -> bill, values[1] -> percentage, values[2] -> people
-            tipPP.innerText = '$' + (values[0] * values[1] / 100) / values[2]
+            let tipResult = (values[0] * values[1] / 100) / values[2]
+            tipPP.innerText = '$' + tipResult.toFixed(2)
             values = []
             field.placeholder = 'Insert bill amount';
             nextButton.innerHTML = 'Next'
@@ -51,7 +54,7 @@ process = function () {
 //     bill.innerHTML = '$' + field.value;
 // }
 
-Reset = function () {
+let reset = function () {
     values = []
     field.value = null;
     field.placeholder = 'Insert bill amount';
@@ -65,6 +68,9 @@ Reset = function () {
 }
 
 // DA FARE:
+// aggiustare il cesso focus di chrome
+// impedire inserimento numeri negativi.
+// max due cifre dopo la virgola
 // aggiornamento valori instantaneo
 // passaggio successivo con enter
 
