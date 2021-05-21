@@ -18,7 +18,7 @@ let process = function () {
     field.focus()
     // An input type number returns an empty string if you type text. 
     // Empty strings are falsy values.
-    if (field.value) {
+    if (field.value && field.value > 0) {
         field.classList.remove('invalid')
         errorMsg.innerHTML = '&nbsp;'
         values.push(parseInt(field.value));
@@ -46,7 +46,7 @@ let process = function () {
         }
     } else {
         field.classList.add('invalid')
-        errorMsg.innerText = '*Enter a numeric value'
+        errorMsg.innerText = '*Enter a valid numeric value'
     }
 }
 
@@ -68,9 +68,7 @@ let reset = function () {
 }
 
 // DA FARE:
-// aggiustare il cesso focus di chrome
-// impedire inserimento numeri negativi.
-// max due cifre dopo la virgola
+// aggiustare il focus di chrome
 // aggiornamento valori instantaneo
 // passaggio successivo con enter
 

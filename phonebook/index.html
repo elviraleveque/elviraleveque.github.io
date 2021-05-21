@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="form">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname">
+        <label for="prefix">Prefix</label>
+        <select id="prefix"></select>
+        <label for="tel">Phone number</label>
+        <input type="tel" id="tel">
+        <button id="add" onclick="add();">Add</button>
+    </section>
+    <section id="phonebook">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Prefix</th>
+                <th>Phone number</th>
+                <th></th>
+            </tr>
+        </table>
+    </section>
+
+    <script src="js/controller.js"></script>
+</body>
+
+</html>
