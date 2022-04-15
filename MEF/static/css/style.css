@@ -573,6 +573,7 @@ div#home-left p {
 /* contatti*/
 #contatti-body {
     background-color: var(--mefRed);
+    overflow: hidden;
 }
 
 #contatti-body main {
