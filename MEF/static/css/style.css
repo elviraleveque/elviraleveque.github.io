@@ -577,6 +577,8 @@ div#home-left p {
 
 #contatti-body main {
     position: relative;
+    padding-bottom: 0;
+    overflow: hidden;
 }
 
 #scrolling-text {
@@ -605,7 +607,7 @@ div#home-left p {
 }
 
 #contatti {
-    min-height: calc(100vh - 140px - 35px - 50px);
+    min-height: calc(100vh - 70px - 35px - 50px);
     width: 100%;
     display: flex;
     flex-direction: column;
