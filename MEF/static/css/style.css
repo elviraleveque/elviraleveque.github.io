@@ -640,6 +640,10 @@ div#home-left p {
     color: white;
 }
 
+#contatti-card a {
+    color: white;
+}
+
 .contatto {
     display: flex;
 }
