@@ -164,6 +164,113 @@ footer p, footer a {
 }
 /* end footer*/
 
+.scroll-down {
+    display: block;
+    position: relative;
+    padding-top: 39px;
+    cursor: pointer;
+}
+
+/* freccia animazione */
+.arrow-down {
+    display: block;
+    width: 10px;
+    height: 20px;
+}
+
+.arrow-down:after {
+    content: '';
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.scroll-down::before {
+    -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+    /* Safari 4+ */
+    
+    -moz-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+    /* Fx 5+ */
+    
+    -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+    /* Opera 12+ */
+    
+    animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+    /* IE 10+, Fx 29+ */
+    
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    margin-left: -1px;
+    width: 2px;
+    height: 50px;
+    background: white;
+    content: ' ';
+}
+
+@keyframes elasticus {
+    0% {
+        -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+        -moz-transform-origin: 0% 0%;
+        -o-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scale(1, 0);
+        -ms-transform: scale(1, 0);
+        -moz-transform: scale(1, 0);
+        -o-transform: scale(1, 0);
+        transform: scale(1, 0);
+    }
+    50% {
+        -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+        -moz-transform-origin: 0% 0%;
+        -o-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    50.1% {
+        -webkit-transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+        -moz-transform-origin: 0% 100%;
+        -o-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    100% {
+        -webkit-transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+        -moz-transform-origin: 0% 100%;
+        -o-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        -webkit-transform: scale(1, 0);
+        -ms-transform: scale(1, 0);
+        -moz-transform: scale(1, 0);
+        -o-transform: scale(1, 0);
+        transform: scale(1, 0);
+    }
+}
+
+/* end freccia animazione */
+
+
 @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -187,6 +294,137 @@ footer p, footer a {
 /* home page */
 #home-body {
     background-color: var(--mefBlue);
+    position: relative;
+}
+
+.background-animation{
+    position: absolute;
+    width: 100%;
+    height:100vh;
+    overflow: hidden; 
+}
+
+.squares{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.squares li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    /* width: 20px;
+    height: 20px; */
+    /* border: 2px solid rgba(255, 255, 255); */
+    opacity: .5;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+    font-size: 1em;
+    animation: float 25s linear infinite;
+    bottom: -150px;    
+}
+
+.squares li:nth-child(1){
+    left: 25%;
+    font-size: 4em;
+    /* width: 80px;
+    height: 80px; */
+    animation-delay: 0s;
+}
+
+.squares li:nth-child(2){
+    left: 10%;
+    font-size: 1em;
+    /* width: 20px;
+    height: 20px; */
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.squares li:nth-child(3){
+    left: 70%;
+    font-size: 1em;
+    /* width: 20px;
+    height: 20px; */
+    animation-delay: 4s;
+}
+
+.squares li:nth-child(4){
+    left: 40%;
+    font-size: 3em;
+    /* width: 60px;
+    height: 60px; */
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.squares li:nth-child(5){
+    left: 65%;
+    font-size: 1em;
+    /* width: 20px;
+    height: 20px; */
+    animation-delay: 0s;
+}
+
+.squares li:nth-child(6){
+    left: 75%;
+    font-size: 5.5em;
+    /* width: 110px;
+    height: 110px; */
+    animation-delay: 3s;
+}
+
+.squares li:nth-child(7){
+    left: 35%;
+    font-size: 7em;
+    /* width: 150px;
+    height: 150px; */
+    animation-delay: 7s;
+}
+
+.squares li:nth-child(8){
+    left: 50%;
+    font-size: 1.5em;
+    /* width: 25px;
+    height: 25px; */
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.squares li:nth-child(9){
+    left: 20%;
+    font-size: .5em;
+    /* width: 15px;
+    height: 15px; */
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.squares li:nth-child(10){
+    left: 85%;
+    font-size: 7em;
+    /* width: 150px;
+    height: 150px; */
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes float {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: .5;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: .5;
+    }
+
 }
 
 main {
@@ -203,9 +441,16 @@ main {
     margin: 0 5px;
 }
 
+#home .scroll-down {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 120px;
+    left: calc(10% + 15px);
+}
+
 #hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     height: calc(100vh - 35px - 70px - 70px - 50px);
 }
@@ -380,109 +625,6 @@ div#home-left p {
     margin-top: 15px;
 }
 
-.scroll-down {
-    display: block;
-    position: relative;
-    padding-top: 39px;
-    cursor: pointer;
-}
-
-.arrow-down {
-    display: block;
-    width: 10px;
-    height: 20px;
-}
-
-.arrow-down:after {
-    content: '';
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 8px;
-    height: 8px;
-    border-top: 2px solid white;
-    border-right: 2px solid white;
-    -moz-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg);
-}
-
-.scroll-down::before {
-    -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Safari 4+ */
-    
-    -moz-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Fx 5+ */
-    
-    -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* Opera 12+ */
-    
-    animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
-    /* IE 10+, Fx 29+ */
-    
-    position: absolute;
-    top: 0px;
-    left: 5px;
-    margin-left: -1px;
-    width: 2px;
-    height: 50px;
-    background: white;
-    content: ' ';
-}
-
-@keyframes elasticus {
-    0% {
-        -webkit-transform-origin: 0% 0%;
-        -ms-transform-origin: 0% 0%;
-        -moz-transform-origin: 0% 0%;
-        -o-transform-origin: 0% 0%;
-        transform-origin: 0% 0%;
-        -webkit-transform: scale(1, 0);
-        -ms-transform: scale(1, 0);
-        -moz-transform: scale(1, 0);
-        -o-transform: scale(1, 0);
-        transform: scale(1, 0);
-    }
-    50% {
-        -webkit-transform-origin: 0% 0%;
-        -ms-transform-origin: 0% 0%;
-        -moz-transform-origin: 0% 0%;
-        -o-transform-origin: 0% 0%;
-        transform-origin: 0% 0%;
-        -webkit-transform: scale(1, 1);
-        -ms-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        -o-transform: scale(1, 1);
-        transform: scale(1, 1);
-    }
-    50.1% {
-        -webkit-transform-origin: 0% 100%;
-        -ms-transform-origin: 0% 100%;
-        -moz-transform-origin: 0% 100%;
-        -o-transform-origin: 0% 100%;
-        transform-origin: 0% 100%;
-        -webkit-transform: scale(1, 1);
-        -ms-transform: scale(1, 1);
-        -moz-transform: scale(1, 1);
-        -o-transform: scale(1, 1);
-        transform: scale(1, 1);
-    }
-    100% {
-        -webkit-transform-origin: 0% 100%;
-        -ms-transform-origin: 0% 100%;
-        -moz-transform-origin: 0% 100%;
-        -o-transform-origin: 0% 100%;
-        transform-origin: 0% 100%;
-        -webkit-transform: scale(1, 0);
-        -ms-transform: scale(1, 0);
-        -moz-transform: scale(1, 0);
-        -o-transform: scale(1, 0);
-        transform: scale(1, 0);
-    }
-}
-
 #il-team {
     background-color: var(--mefBlue);
     display: flex;
@@ -572,13 +714,13 @@ div#home-left p {
 
 /* contatti*/
 #contatti-body {
-    background-color: white;
+    background-color: var(--mefRed);
 }
 
 #contatti-body main {
     position: relative;
     padding: 70px 0;
-    background-color: var(--mefRed);
+
 }
 
 #contatti-body footer {
@@ -596,23 +738,31 @@ div#home-left p {
 
 #scrolling-text-wrapper {
     width: 100%;
-    position: relative;
+    height: 100vh;
+    position: absolute;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#scrolling-text {
-    font-size: 10em;
+.scrolling-text {
+    font-size: 20em;
     font-weight: 900;
     white-space: nowrap;
-    opacity: .5;
+    opacity: .3;
     -webkit-text-stroke: 2px white;
     -webkit-text-fill-color: transparent;
-    animation: text-scrolling 60s linear infinite;
+    animation: text-scrolling-top 60s linear infinite;
     padding: 0;
     margin: 0;
 }
 
-@keyframes text-scrolling {
+.scrolling-text.bottom {
+    animation: text-scrolling-bottom 60s linear infinite;
+}
+
+@keyframes text-scrolling-top {
     0% {
         transform: translateX(100vw);
     }
@@ -623,6 +773,20 @@ div#home-left p {
 
     100% {
         transform: translateX(100vw);
+    }
+}
+
+@keyframes text-scrolling-bottom {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }
 
@@ -698,7 +862,8 @@ div#home-left p {
 
     #hero {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
     }
 
     #home-left,
