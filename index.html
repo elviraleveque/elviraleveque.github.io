@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MEF - Agenzia di Comunicazione</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
-<body>
-    <h1>prova</h1>
-    <input type="file" accept="image/*" capture>
+
+<body id="home-body">
+    <div id="menu" class="overlay">
+        <nav class="overlay-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chisiamo.html">Chi siamo</a></li>
+                <li><a href="progetti.html">Progetti</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="home">
+        <div class="open-menu blur-animation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        <div id="social">
+            <a href="https://www.facebook.com/MEF.Agency"><img src="static/img/social/facebook_v.png" alt=""
+                    class="blur-animation"></a>
+            <a href="https://www.instagram.com/mef_communication/"><img src="static/img/social/instagram_v.png" alt=""
+                    class="blur-animation"></a>
+            <a href="https://wa.me/3715547947/?text=%27"><img src="static/img/social/whatsapp_v.png" alt=""
+                    class="blur-animation"></a>
+        </div>
+        <div id="hero">
+            <div id="home-left">
+                <div class="home-row">
+                    <span class="bar-animation-right"></span>
+                    <img src="static/img/mefLogoWhite.png" alt="logo" class="logo fade-animation"
+                        style="animation-delay: 0.4s;">
+                </div>
+                <div class="home-row">
+                    <span class="bar-animation-left" style="animation-delay: 1s;"></span>
+                    <p class="fade-animation" style="animation-delay: 1.4s;">COMUNICAZIONE E MARKETING</p>
+                </div>
+            </div>
+            <div id="home-right">
+                <div class="home-row">
+                    <div class="label">
+                        <span class="bar-animation-left" style="animation-delay: 0.8s;"></span>
+                        <p class="fade-animation" style="animation-delay: 1.2s;">Siamo</p>
+                    </div>
+                    <div class="text">
+                        <span class="bar-animation-right" style="animation-delay: 1.4s;"></span>
+                        <p class="fade-animation" style="animation-delay: 1.8s;">Un team di giovani creativi, energici
+                            e dinamici</p>
+                    </div>
+                </div>
+                <div class="home-row">
+                    <div class="label">
+                        <span class="bar-animation-right" style="animation-delay: 1.2s;"></span>
+                        <p class="fade-animation" style="animation-delay: 1.6s;">Dalle idee ai risultati</p>
+                    </div>
+                    <div class="text">
+                        <span class="bar-animation-left" style="animation-delay: 0.6s;"></span>
+                        <p class="fade-animation" style="animation-delay: 1s;">brand identity, social media
+                            management,
+                            servizi web marketing, progetti e sviluppo di strategie di comunicazione per aziende,
+                            privati,
+                            enti pubblici e per il sociale</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="blur-animation">Copyright © Website 2022</p>
+        <a class="blur-animation" href="https://www.iubenda.com/privacy-policy/24466990">Privacy Policy</a>
+    </footer>
 </body>
+
+<script src="static/js/hambMenu.js"></script>
+
 </html>
