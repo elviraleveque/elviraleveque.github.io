@@ -573,13 +573,21 @@ div#home-left p {
 /* contatti*/
 #contatti-body {
     background-color: var(--mefRed);
-    overflow: hidden;
 }
 
 #contatti-body main {
     position: relative;
     padding-bottom: 0;
-    overflow: hidden;
+}
+
+#scrolling-text-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 #scrolling-text {
@@ -590,7 +598,9 @@ div#home-left p {
     opacity: .5;
     -webkit-text-stroke: 2px white;
     -webkit-text-fill-color: transparent;
-    animation: text-scrolling 60s linear infinite;
+    animation: text-scrolling 10s linear infinite;
+    padding: 0;
+    margin: 0;
 }
 
 @keyframes text-scrolling {
@@ -701,6 +711,10 @@ div#home-left p {
         margin-top: 50px;
     }
 
+    #contatti-testi h2 {
+        font-size: 1.5em;
+    }
+
     #contatti-card {
         width: 100%;
         flex-direction: column;
@@ -710,6 +724,7 @@ div#home-left p {
 
     .contatto {
         width: 100%;
+        flex-direction: column;
     }
 }
 
