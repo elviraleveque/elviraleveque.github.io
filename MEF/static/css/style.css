@@ -955,4 +955,8 @@ div#home-left p {
     #scrolling-text {
         animation-duration: 20s;
     }
+
+    .squares li:nth-child(1), .squares li:nth-child(5), .squares li:nth-child(7), .squares li:nth-child(9), .squares li:nth-child(10) {
+        display: none;
+    }
 }
