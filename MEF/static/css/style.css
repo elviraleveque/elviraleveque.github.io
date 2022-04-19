@@ -719,21 +719,10 @@ div#home-left p {
 
 #contatti-body main {
     position: relative;
-    padding: 70px 0;
-
 }
 
 #contatti-body footer {
     background-color: var(--mefRed);
-}
-
-#contatti-body #social {
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-#contatti-body .open-menu {
-    left: 10%;
 }
 
 #scrolling-text-wrapper {
@@ -796,12 +785,8 @@ div#home-left p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-}
-
-#contatti-testi {
-    padding-left: 10%;
-    padding-right: 10%;
+    justify-content: space-around;
+    padding-top: 70px;
 }
 
 #contatti-testi h2 {
@@ -821,8 +806,6 @@ div#home-left p {
     gap: 30px;
     color: white;
     margin-top: 30px;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 #contatti-card a {
@@ -944,12 +927,18 @@ div#home-left p {
         text-align: center;
     }
 
+    #contatti {
+        text-align: center;
+    }
+
     #contatti-testi h2 {
         font-size: 1.5em;
+        margin-top: 50px;
     }
 
     .contatto {
         flex-direction: column;
+        align-items: center;
     }
     
     #scrolling-text {
