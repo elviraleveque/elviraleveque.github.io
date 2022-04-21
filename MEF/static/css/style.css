@@ -50,6 +50,10 @@ header {
     align-items: center;
 }
 
+p span.black {
+    font-weight: 900;
+}
+
 /* hamburger menu */
 .open-menu {
     cursor: pointer;
@@ -631,6 +635,21 @@ div#home-left p {
     margin-top: 15px;
 }
 
+#chi-siamo-testi p:nth-of-type(1) {
+    color: var(--mefRed);
+}
+
+#chi-siamo-testi p:nth-of-type(2) {
+    color: var(--mefBlue);
+    font-size: 1.5em;
+}
+
+#chi-siamo-testi span.highlight {
+    background-color: var(--mefRed);
+    color: #fff;
+    padding: 5px;
+}
+
 #il-team {
     background-color: var(--mefBlue);
     display: flex;
@@ -808,10 +827,6 @@ div#home-left p {
     color: white;
     font-size: 1em;
     line-height: 2em;
-}
-
-p span.black {
-    font-weight: 900;
 }
 
 #contatti-card {
