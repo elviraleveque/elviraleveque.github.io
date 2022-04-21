@@ -44,11 +44,17 @@ html {
     scroll-behavior: smooth;
   }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* hamburger menu */
 .open-menu {
-    position: fixed;
     cursor: pointer;
     z-index: 100;
+    display: inline;
 }
 
 .open-menu .line {
@@ -58,7 +64,6 @@ html {
     background-color: #fff;
     margin: 8px auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
     transition: all 0.3s ease-in-out;
     transform-origin: 50% 50%;
 }
@@ -452,7 +457,7 @@ main {
     display: flex;
     justify-content: center;
     align-content: center;
-    height: calc(100vh - 35px - 70px - 70px - 50px);
+    height: calc(100vh - 44px - 70px - 70px - 50px);
 }
 
 #home-left,
@@ -460,7 +465,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 #home-left {
@@ -473,6 +478,7 @@ main {
 
 .home-row {
     position: relative;
+
 }
 
 div#home-left p {
@@ -607,7 +613,7 @@ div#home-left p {
 }
 
 #chi-siamo {
-    min-height: calc(100vh - 140px - 35px);
+    min-height: calc(100vh - 140px - 44px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -669,7 +675,7 @@ div#home-left p {
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    min-height: calc(100vh - 140px - 35px - 50px);
+    min-height: calc(100vh - 140px - 44px - 50px);
 }
 
 #servizi-body h2 {
@@ -688,7 +694,7 @@ div#home-left p {
 
 .servizio {
     opacity: 0;
-    width: 45%;
+    width: 30%;
 }
 
 .servizio img {
@@ -780,7 +786,7 @@ div#home-left p {
 }
 
 #contatti {
-    min-height: calc(100vh - 140px - 35px - 50px);
+    min-height: calc(100vh - 140px - 44px - 50px);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -791,12 +797,21 @@ div#home-left p {
 
 #contatti-testi h2 {
     color: white;
+    font-size: 2.5em;
+}
+
+#contatti-testi h2:nth-child(2) {
+    color: var(--mefYellow);
 }
 
 #contatti-testi p {
     color: white;
     font-size: 1em;
     line-height: 2em;
+}
+
+p span.black {
+    font-weight: 900;
 }
 
 #contatti-card {
@@ -829,6 +844,7 @@ div#home-left p {
     margin-bottom: 10px;
     font-size: 1em;
     font-weight: 900;
+    color: var(--mefYellow);
 }
 
 .contatto p {
@@ -934,6 +950,11 @@ div#home-left p {
     #contatti-testi h2 {
         font-size: 1.5em;
         margin-top: 50px;
+    }
+
+    #contatti-testi h2:nth-child(2) {
+        font-size: 1.5em;
+        margin-top: 0px;
     }
 
     .contatto {
