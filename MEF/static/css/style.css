@@ -54,6 +54,10 @@ p span.black {
     font-weight: 900;
 }
 
+p span.grande {
+    font-size: 1.2em;
+}
+
 /* hamburger menu */
 .open-menu {
     cursor: pointer;
@@ -178,6 +182,9 @@ footer p, footer a {
     position: relative;
     padding-top: 39px;
     cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 /* freccia animazione */
@@ -185,6 +192,8 @@ footer p, footer a {
     display: block;
     width: 10px;
     height: 20px;
+    position: absolute;
+    right: 0
 }
 
 .arrow-down:after {
@@ -218,7 +227,7 @@ footer p, footer a {
     
     position: absolute;
     top: 0px;
-    left: 5px;
+    right: 4px;
     margin-left: -1px;
     width: 2px;
     height: 50px;
@@ -438,6 +447,7 @@ footer p, footer a {
 
 main {
     padding: 70px 10%;
+    position: relative;
 }
 
 #social {
@@ -453,7 +463,8 @@ main {
 #home .scroll-down {
     transform: rotate(180deg);
     position: absolute;
-    top: 120px;
+    bottom: auto;
+    top: 125px;
     left: calc(10% + 15px);
 }
 
@@ -488,6 +499,28 @@ main {
 div#home-left p {
     color: white;
     font-size: 1.43vw;
+}
+
+div#home-left p::after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    background-color: var(--mefYellow);
+    display: block;
+    animation: rect-animation-home 2s cubic-bezier(.74, .06, .4, .92) forwards;
+}
+
+@keyframes rect-animation-home {
+    0% {
+        transform: translateX(100vw)
+    }
+    70% {
+        transform: translateX(-100vw)
+    }
+    100% {
+        transform: translateX(0)
+    }
 }
 
 .logo {
@@ -622,7 +655,30 @@ div#home-left p {
     flex-direction: column;
     justify-content: space-around;
     gap: 30px;
+}
 
+#social .logo-chi-siamo {
+    height: 30px;
+    width: auto;
+}
+
+.chi-siamo-stella {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 150px;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
 }
 
 #chi-siamo>img {
@@ -630,32 +686,80 @@ div#home-left p {
     margin-top: 20px;
 }
 
+#chi-siamo h2 {
+    margin-top: 20px;
+}
+
 #chi-siamo p {
-    line-height: 2;
+    line-height: 1.5;
     margin-top: 15px;
+}
+
+#chi-siamo-testi {
+    position: relative;
 }
 
 #chi-siamo-testi p:nth-of-type(1) {
     color: var(--mefRed);
+    margin-top: 20px;
 }
 
 #chi-siamo-testi p:nth-of-type(2) {
     color: var(--mefBlue);
-    font-size: 1.5em;
+    font-size: 2.5em;
+    margin: 30px 0;
+    line-height: 1.3;
+}
+
+#chi-siamo-testi p:nth-of-type(2):before {
+    content: "";
+    width: 35px;
+    height: 100%;
+    background-color: var(--mefBlue);
+    position: absolute;
+    left: -13%;
+  }
+
+#chi-siamo-testi p:nth-of-type(3) {
+    color: var(--mefBlue);
+}
+
+#chi-siamo-testi p:nth-of-type(3)::after {
+    content: url(../img/team/heart.svg);
+    display: inline-block;
+    height:20px;
+    width:20px;
+}
+
+
+#chi-siamo-testi p:nth-of-type(5) {
+    font-size: 2em;
+    line-height: 1;
+    font-weight: 500;
 }
 
 #chi-siamo-testi span.highlight {
+    font-weight: 700;
+    color: var(--mefRed);
+}
+
+#chi-siamo-testi span.highlight-due {
+    font-weight: 900;
+    color: var(--mefRed);
+}
+
+/* #chi-siamo-testi span.highlight {
     background-color: var(--mefRed);
     color: #fff;
     padding: 5px;
-}
+} */
 
 #il-team {
     background-color: var(--mefBlue);
     display: flex;
     flex-wrap: wrap;
     row-gap: 100px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 100px 10%;
     text-align: center;
 }
@@ -808,10 +912,12 @@ div#home-left p {
     min-height: calc(100vh - 140px - 44px - 50px);
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 70px;
+}
+
+#contatti #left {
+    width: 48%;
 }
 
 #contatti-testi h2 {
@@ -864,6 +970,36 @@ div#home-left p {
 
 .contatto p {
     font-size: 0.8em;
+}
+
+#contatti #right {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lavora-con-noi {
+    padding: 50px;
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+    border-radius: 15px;
+}
+
+#lavora-con-noi img {
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+#lavora-con-noi h3 {
+    color: var(--mefRed);
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+#lavora-con-noi a {
+    font-size: 0.8em;
+    color: var(--mefRed);
 }
 
 /* end contatti*/
@@ -945,9 +1081,13 @@ div#home-left p {
         width: 40%;
     }
 
-    #chi-siamo p {
-        font-size: 0.8em;
+    .chi-siamo-stella {
+        display: none;
     }
+
+    /* #chi-siamo p {
+        font-size: 0.8em;
+    } */
 
     .member {
         width: 100%;
@@ -960,6 +1100,11 @@ div#home-left p {
 
     #contatti {
         text-align: center;
+        flex-direction: column;
+    }
+
+    #contatti #left, #contatti #right {
+        width: 100%;
     }
 
     #contatti-testi h2 {
@@ -983,5 +1128,9 @@ div#home-left p {
 
     .squares li:nth-child(1), .squares li:nth-child(5), .squares li:nth-child(7), .squares li:nth-child(9), .squares li:nth-child(10) {
         display: none;
+    }
+
+    #contatti #right {
+        margin-top: 100px;
     }
 }
