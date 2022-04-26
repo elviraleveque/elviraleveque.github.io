@@ -657,30 +657,6 @@ div#home-left p::after {
     gap: 30px;
 }
 
-#social .logo-chi-siamo {
-    height: 30px;
-    width: auto;
-}
-
-.chi-siamo-stella {
-    position: absolute;
-    right: 0;
-    top: 0px;
-    width: 150px;
-    animation: rotate 6s linear infinite;
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-    
-}
-
 #chi-siamo>img {
     width: 200px;
     margin-top: 20px;
@@ -700,13 +676,17 @@ div#home-left p::after {
 }
 
 #chi-siamo-testi p:nth-of-type(1) {
-    color: var(--mefRed);
+    background-color: var(--mefRed);
+    display: inline-block;
+    color: var(--mefYellow);
     margin-top: 20px;
+    padding: 10px;
+    font-size: 1.5em;
 }
 
 #chi-siamo-testi p:nth-of-type(2) {
     color: var(--mefBlue);
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 30px 0;
     line-height: 1.3;
 }
@@ -720,8 +700,35 @@ div#home-left p::after {
     left: -13%;
   }
 
+
+#chi-siamo-testi p:nth-of-type(2)::after {
+    content: '';
+    background-image:url(../img/team/stella-blu.png);
+    background-size: 150px 150px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
 #chi-siamo-testi p:nth-of-type(3) {
     color: var(--mefBlue);
+    font-size: 1.3em;
 }
 
 #chi-siamo-testi p:nth-of-type(3)::after {
@@ -733,7 +740,7 @@ div#home-left p::after {
 
 
 #chi-siamo-testi p:nth-of-type(5) {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1;
     font-weight: 500;
 }
@@ -803,11 +810,12 @@ div#home-left p::after {
 #progetti {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .progetto {
     position: relative;
-    width: 25%;
+    width: 24%;
     height: 300px;
     overflow: hidden;
 }
@@ -816,30 +824,52 @@ div#home-left p::after {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    transition: transform .5s ease-in-out;
 }
 
-/* .progetto img::after {
-    content:'';
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%; 
-    height:100%;
-    display: inline-block;
-    background: linear-gradient(to bottom, transparent 0%, black 100%);
-} */
+.progetto-caption-bg {
+    background-color: var(--mefRed);
+    position: absolute;   
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease;
+    cursor: pointer;
+}
 
-.progetto h3 {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 2;
+.progetto:hover .progetto-caption-bg {
+    width: 100%;
+}
+
+.progetto-caption {
     color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.1s;
+    cursor: pointer;
 }
 
-.progetto:hover img {
-    transform: scale(1.2);
+.progetto-caption h3 {
+    transition: opacity 0.5s ease;
+    transition-delay: 0.5s;
+}
+
+.progetto-caption p {
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+.progetto:hover .progetto-caption{
+    opacity: 1;
 }
 
 /* end progetti */
@@ -989,7 +1019,7 @@ div#home-left p::after {
 #contatti-testi p {
     color: white;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 2.5;
 }
 
 #contatti-card {
@@ -1142,7 +1172,7 @@ div#home-left p::after {
         width: 40%;
     }
 
-    .chi-siamo-stella {
+    #chi-siamo-testi p:nth-of-type(2)::after {
         display: none;
     }
 
