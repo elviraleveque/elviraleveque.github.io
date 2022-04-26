@@ -875,6 +875,54 @@ div#home-left p::after {
 /* end progetti */
 
 
+/* progetto */
+.progetto-body .open-menu .line {
+    background-color: var(--mefRed);
+
+}
+
+.progetto-body section {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+}
+
+.progetto-testo, .progetto-immagini {
+    width: 45%;
+}
+
+.progetto-testo {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 164px;
+    align-self: flex-start;
+}
+
+.progetto-immagini {
+
+}
+
+.progetto-testo h2 {
+    color: var(--mefRed);
+    font-size: 3em;
+}
+
+.progetto-testo h4 {
+    color: var(--mefRed);
+    margin-bottom: 50px;
+}
+
+.progetto-testo p {
+    font-size: 0.8em;
+    line-height: 1.8;
+}
+
+.progetto-immagini img {
+    width: 100%;
+}
+/* end progetto */
+
+
 /* servizi */
 
 #servizi-body .open-menu .line {
