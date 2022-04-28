@@ -894,7 +894,7 @@ div#home-left p::after {
 .progetto-testo {
     position: -webkit-sticky;
     position: sticky;
-    top: 164px;
+    top: 100px;
     align-self: flex-start;
 }
 
