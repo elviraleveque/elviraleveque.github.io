@@ -1241,6 +1241,19 @@ div#home-left p::after {
         width: 100%;
     }
 
+    .progetto-body section {
+        flex-direction: column;
+    }
+
+    .progetto-testo, .progetto-immagini {
+        width: 100%;
+    }
+
+    .progetto-testo {
+        position: static;
+        top: auto;
+    }
+
     #contatti {
         text-align: center;
         flex-direction: column;
